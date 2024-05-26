@@ -2,12 +2,17 @@ from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
-# Sample data to simulate responses (you would replace this with a real database or API)
+# Sample data to simulate responses
 health_data = {
     "fever": "Drink plenty of fluids, rest, and take fever-reducing medications like paracetamol.",
     "cough": "Stay hydrated, use cough drops, and consult a doctor if the cough persists.",
-    "headache": "Take over-the-counter pain relief like ibuprofen or paracetamol, and rest in a quiet, dark room."
+    "headache": "Take over-the-counter pain relief like ibuprofen or paracetamol, and rest in a quiet, dark room.",
+    "sore throat": "Gargle with warm salt water, drink soothing liquids, and rest your voice.",
+    "stomach ache": "Avoid solid foods, stick to bland liquids, and consider over-the-counter remedies like antacids or anti-diarrheal medication.",
+    "cold": "Rest, drink fluids, and consider over-the-counter cold remedies like decongestants or antihistamines.",
+    # Add more health topics and detailed responses here...
 }
+
 
 @app.route('/')
 def home():
